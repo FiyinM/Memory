@@ -27,11 +27,8 @@ def show_directions():
     basic.show_arrow(choose_direction_4, 500)
     basic.show_string("", 200)
     while True:
-        user_input = input.button_is_pressed(Button.A)
-        if user_input:
+        if input.button_is_pressed(Button.A):
             basic.show_arrow(ArrowNames.NORTH, 500)
-            if user_input == choose_direction_1:
-                basic.show_string("yes", 200)
         if input.button_is_pressed(Button.B):
                 basic.show_arrow(ArrowNames.SOUTH, 500)
 

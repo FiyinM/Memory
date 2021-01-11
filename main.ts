@@ -13,7 +13,6 @@ def repeat_directions():
  */
 // input.on_button_pressed(Button.B, repeat_directions)
 input.onButtonPressed(Button.A, function show_directions() {
-    let user_input: boolean;
     let directions = [ArrowNames.North, ArrowNames.South]
     let choose_direction_1 = directions[randint(0, 1)]
     let choose_direction_2 = directions[randint(0, 1)]
@@ -28,13 +27,8 @@ input.onButtonPressed(Button.A, function show_directions() {
     basic.showArrow(choose_direction_4, 500)
     basic.showString("", 200)
     while (true) {
-        user_input = input.buttonIsPressed(Button.A)
-        if (user_input) {
+        if (input.buttonIsPressed(Button.A)) {
             basic.showArrow(ArrowNames.North, 500)
-            if (user_input == choose_direction_1) {
-                basic.showString("yes", 200)
-            }
-            
         }
         
         if (input.buttonIsPressed(Button.B)) {
